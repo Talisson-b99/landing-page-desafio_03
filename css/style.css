@@ -479,6 +479,7 @@ footer.footer {
 
   .howItWorks {
     padding-inline: 24px;
+    margin-top: 32px;
 
     h2 {
       text-align: center;
@@ -488,11 +489,12 @@ footer.footer {
     .paragraph {
       font-size: 18px;
     }
-  }
 
-  .cards {
-    ul {
-      flex-direction: column;
+    .cards {
+      margin-top: 32px;
+      ul {
+        flex-direction: column;
+      }
     }
   }
 
@@ -501,6 +503,10 @@ footer.footer {
     h1 {
       font-size: 32px;
     }
+
+    .title {
+      margin-top: 20px;
+    }
   }
   .paragraph {
     font-size: 18px;
@@ -508,6 +514,12 @@ footer.footer {
 
   .section-secondary-dish {
     padding-inline: 24px;
+    align-content: space-between;
+    margin-top: 64px;
+
+    background-size: 200px 700px;
+
+    min-height: 700px;
     h1 {
       font-size: 32px;
     }
@@ -546,6 +558,10 @@ footer.footer {
       .button-secondary {
         font-size: 18px;
       }
+    }
+
+    .paragraph {
+      margin-block: 12px;
     }
   }
 

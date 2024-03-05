@@ -461,6 +461,7 @@ footer.footer {
   .btn-menu {
     background-color: var(--amarelo);
     padding: 10px 20px;
+    display: flex;
 
     svg {
       fill: #fff;

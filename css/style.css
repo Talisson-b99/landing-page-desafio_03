@@ -401,16 +401,25 @@ footer.footer {
   body {
     background-image: none;
   }
+
   header {
-    display: none;
+    padding: 12px;
   }
-  header .brand {
+  .menu {
+    position: fixed;
+    right: -100%;
+    height: 10000px;
+    z-index: 20;
+    transition: all 0.4s ease-in-out;
+  }
+  .menu .brand {
     color: var(--amarelo);
     font-size: 18px;
   }
 
-  header.is-open {
+  .menu.is-open {
     position: fixed;
+
     top: 0;
     right: 0;
     bottom: 0;
@@ -420,6 +429,24 @@ footer.footer {
     justify-content: flex-start;
     z-index: 20;
     background-color: #fff;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .btn-booking {
+    background-color: var(--amarelo);
+    width: 200px;
+  }
+
+  .btn-menu-close {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .nav-desktop {
@@ -431,13 +458,36 @@ footer.footer {
     }
   }
 
-  header nav ul {
-    flex-direction: column;
-    gap: 14px;
+  .btn-menu {
+    background-color: var(--amarelo);
+    padding: 10px 20px;
+
+    svg {
+      fill: #fff;
+    }
   }
 
-  nav ul li a .is-open {
+  .menu nav ul {
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 40px;
+  }
+
+  .menu nav ul li a .is-open {
     font-size: 12px;
+  }
+
+  .howItWorks {
+    padding-inline: 24px;
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+    }
+
+    .paragraph {
+      font-size: 18px;
+    }
   }
 
   .cards {
@@ -447,7 +497,7 @@ footer.footer {
   }
 
   .section-first-dish {
-    padding-inline: 12px;
+    padding-inline: 24px;
     h1 {
       font-size: 32px;
     }
@@ -457,7 +507,7 @@ footer.footer {
   }
 
   .section-secondary-dish {
-    padding-inline: 12px;
+    padding-inline: 24px;
     h1 {
       font-size: 32px;
     }
@@ -476,11 +526,12 @@ footer.footer {
   }
 
   .testimonial {
-    padding-inline: 12px;
+    padding-inline: 24px;
+    margin-top: 100px;
   }
 
   .subscription {
-    padding-inline: 12px;
+    padding-inline: 24px;
 
     h2 {
       text-align: center;
@@ -491,6 +542,10 @@ footer.footer {
     div {
       gap: 10px;
       margin-top: 32px;
+
+      .button-secondary {
+        font-size: 18px;
+      }
     }
   }
 
@@ -509,9 +564,34 @@ footer.footer {
     }
   }
 
+  .subscription {
+    .input-email {
+      input {
+        padding: 20px 12px;
+      }
+      ::placeholder {
+        font-size: 12px;
+      }
+    }
+
+    button {
+      padding-block: 12px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 12px;
+    }
+  }
+
   footer.footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-inline: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  footer.footer {
+    grid-template-columns: 1fr;
   }
 }
